@@ -37,6 +37,16 @@ files = [
 ]
 
 [[package]]
+name = "django-redirect"
+version = "0.2"
+description = "A slightly more robust version of the native django redirect"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-redirect-0.2.tar.gz", hash = "sha256:749353bfdf5e388fc812fd0d2083e67915d4d775f0c2cbb6618d7850d8f3e008"},
+]
+
+[[package]]
 name = "flask"
 version = "2.3.3"
 description = "A simple framework for building complex web applications."
@@ -175,4 +185,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "978f3ddb1f5ca54ceb95831b8b4035dee208a8786fd7c9b1678b98868e9048ea"
+content-hash = "39a694cd58a5a40581c68641787eeed95f0f7dcc5ca9e1ad3dc71804408da059"
