@@ -5,7 +5,7 @@ import string
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './'
-app.config['MAX_FILE_SIZE'] = 10 * 1024 * 1024  # 10MB
+app.config['MAX_FILE_SIZE'] = 25 * 1024 * 1024  # 10MB
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}  # Add more extensions if needed
 
