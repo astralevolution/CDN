@@ -78,27 +78,29 @@
 </head>
 <body>
 <button id="enterButton" class="hidden" style="font-family: Pacifico; font-size: 50px;">Click to Enter</button>
-<audio id="audioPlayer" src="https://cdn.astralevolution.pro/music.mp3" loop></audio>
+<audio id="audioPlayer" src="/music.mp3" loop></audio>
 <div id="mainContent" class="hidden">
 <div class="center">
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://astralevolution.pro/style.css" />
-<script src="https://astralevolution.pro/snow.js" type="39f766777807b3f749ab2d5e-text/javascript"></script>
+<link rel="stylesheet" href="/style.css" />
+<script src="https://astralevolution.github.io/snow.js" type="39f766777807b3f749ab2d5e-text/javascript"></script>
 <style>
           .social-icons {
             color: #e4e9ff;
           }
         </style>
 </head>
+<script>
+  document.body.style.backgroundImage = "url('./bg.png')";
+</script>
 <body>
 <div class="center">
 <div class="container blur">
-<img class="pfp-image" src="https://cdn.discordapp.com/avatars/1140889335269437571/78fe3b75f2d4f918354bb1854d619957?size=1024" alt="pfp" />
 <p class="username">CDN</p>
 <p class="bio-text">Upload your files below!</p>
-<p class="bio-text">Only supports PNG, JPG, and GIF.</p>
+<p class="bio-text">Files up to 10MB.</p>
 <br>
     <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center;">
         <!-- Create a custom-styled file input button -->

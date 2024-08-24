@@ -7,10 +7,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './'
 app.config['MAX_FILE_SIZE'] = 25 * 1024 * 1024  # 10MB
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}  # Add more extensions if needed
 
 def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return True
 
 def generate_random_filename():
     characters = string.ascii_letters + string.digits
@@ -19,7 +18,9 @@ def generate_random_filename():
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
-
+@app.route('/style', methods=['GET'])
+def style():
+    return render_template('style.css')
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
@@ -41,11 +42,11 @@ def upload_file():
 
             random_filename = generate_random_filename()
             file_extension = file.filename.rsplit('.', 1)[1].lower()
-            filename = f'{random_filename}.{file_extension}'
+            filename = f'{random_filename}.{file_extension}'    
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
 
-            file_url = f'https://cdn.astralevolution.pro/{filename}'
+            file_url = f'https://cdn.trophyx.co/{filename}'
             return redirect(url_for('upload_success', file_url=file_url))
 
     return render_template('upload.html')
