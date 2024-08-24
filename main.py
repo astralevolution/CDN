@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './'
 app.config['MAX_FILE_SIZE'] = 25 * 1024 * 1024  # 10MB
 
-
+port = 3000
 def allowed_file(filename):
     return True
 
@@ -63,4 +63,4 @@ def serve_uploaded_file(filename):
 if __name__ == '__main__':
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
         os.makedirs(app.config['UPLOAD_FOLDER'])
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=port)
